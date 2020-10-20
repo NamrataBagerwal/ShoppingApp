@@ -1,6 +1,6 @@
 package com.android_dev_challenge.shoppingapp.remote_repository
 
-import com.android_dev_challenge.shoppingapp.common.AppConstants.ERROR_MSG_FETCHING_DATA
+import com.android_dev_challenge.shoppingapp.common.AppConstants.ERROR_MSG_OOPS_SOMETHING_WENT_WRONG
 import com.android_dev_challenge.shoppingapp.common.AppConstants.ERROR_MSG_INTERNET_CONNECTION_UNAVAILABLE
 import com.android_dev_challenge.shoppingapp.common.AppConstants.ERROR_MSG_RESOURCE_NOT_FOUND
 import com.android_dev_challenge.shoppingapp.common.ErrorHolder
@@ -24,7 +24,7 @@ class ErrorHandler {
                 )
             }
             is HttpException -> extractHttpExceptions(ex.code())
-            else -> ErrorHolder.UnexpectedException(ERROR_MSG_FETCHING_DATA)
+            else -> ErrorHolder.UnexpectedException(ERROR_MSG_OOPS_SOMETHING_WENT_WRONG)
         }
     }
 
@@ -33,19 +33,19 @@ class ErrorHandler {
     private fun extractHttpExceptions(code: Int): ErrorHolder {
         return when (code) {
             ErrorCodes.BAD_REQUEST.code ->
-                ErrorHolder.BadRequest(ERROR_MSG_FETCHING_DATA)
+                ErrorHolder.BadRequest(ERROR_MSG_OOPS_SOMETHING_WENT_WRONG)
 
             ErrorCodes.INTERNAL_SERVER.code ->
-                ErrorHolder.InternalServerError(ERROR_MSG_FETCHING_DATA)
+                ErrorHolder.InternalServerError(ERROR_MSG_OOPS_SOMETHING_WENT_WRONG)
 
             ErrorCodes.UNAUTHORIZED.code ->
-                ErrorHolder.UnAuthorized(ERROR_MSG_FETCHING_DATA)
+                ErrorHolder.UnAuthorized(ERROR_MSG_OOPS_SOMETHING_WENT_WRONG)
 
             ErrorCodes.RESOURCE_NOT_FOUND.code ->
                 ErrorHolder.ResourceNotFound(ERROR_MSG_RESOURCE_NOT_FOUND)
 
             else ->
-                ErrorHolder.UnexpectedException(ERROR_MSG_FETCHING_DATA)
+                ErrorHolder.UnexpectedException(ERROR_MSG_OOPS_SOMETHING_WENT_WRONG)
 
         }
     }

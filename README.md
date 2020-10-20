@@ -34,14 +34,14 @@ HomePage with Products:
 ![HomePage with Products](screenshots/screenshot.png)
 
 ## Running the tests
-More Test Cases are coming in the next commit.
+Local Unit test cases are up and running. Select each of them/run all the tests at once.
 
 ## Known Issues
 
 ## Future Enhancements
 1. Code Optimization, Code Clean Up and adding applicable Comments.
-2. Offline Implementation for the App
-3. Ability for the user to view the product's price in different currencies
+2. Offline Implementation for the App.
+3. Ability for the user to view the product's price in different currencies.
 
 ## Authors
 Namrata Bagerwal
