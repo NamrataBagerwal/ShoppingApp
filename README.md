@@ -10,12 +10,10 @@ This project is developed as a ShoppingApp where in you can a Products with thei
 ## Getting Started
 
 ```
-git clone https://github.com/NamrataBagerwal/LastFm.git
+git clone https://github.com/NamrataBagerwal/ShoppingApp.git
 ```
 
 Or the same can be imported directly in Android Studio via VCS -> Git -> Clone.
-
-1. Sign-up for a last.fm account at http://last.fm
 
 ## Built With
 1. Android Studio 4.0.1
@@ -33,7 +31,7 @@ Device with Android version 5 (v21), Android Studio 4.0.1, Android Kotlin 1.4.10
 Wait for the project to get build successfully then run the app module on device/emulator.
 
 HomePage with Products:
-![HomePage with Products](screenshots/screenshot)
+![HomePage with Products](screenshots/screenshot.png)
 
 ## Running the tests
 More Test Cases are coming in the next commit.
